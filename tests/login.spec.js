@@ -50,7 +50,7 @@ test.describe("Verify Login feature", () => {
 
         await page.locator("input[name='username']").type("Admin", { delay: 4000 })
 
-        await page.locator("input[name='password']").fill(logindata.wrongpassword)
+        await page.locator("input[name='password']").fill("djngbjn")
 
         await page.locator("button[type='submit']").click()
 
@@ -62,9 +62,9 @@ test.describe("Verify Login feature", () => {
 
 
     test('Login with INvalid username and valid password', async ({ page }) => {
-        await page.locator("input[name='username']").fill(logindata.wrongusername)
+        await page.locator("input[name='username']").fill("ergnewjkfhb")
 
-        await page.locator("input[name='password']").fill(logindata.password)
+        await page.locator("input[name='password']").fill("admin123")
 
         await page.locator("button[type='submit']").click()
 
@@ -77,9 +77,9 @@ test.describe("Verify Login feature", () => {
 
     test('Login with INvalid username and Invalid password', async ({ page }) => {
 
-        await page.locator("input[name='username']").fill(logindata.wrongusername)
+        await page.locator("input[name='username']").fill("dfkjvnj")
 
-        await page.locator("input[name='password']").fill(logindata.wrongpassword)
+        await page.locator("input[name='password']").fill("kngvjfr")
 
         await page.locator("button[type='submit']").click()
 
